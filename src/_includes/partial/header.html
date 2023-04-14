@@ -1,8 +1,70 @@
-<header class="header">
-    <div class="header__container">
-        <div class="header__inner"><a class="header__logo" href="index.html"><img src="../../assets/img/spruce-logo-dark.svg" alt="Spruce CSS" width="140"></a><a class="btn btn--primary" href="https://sprucecss.com/docs/getting-started/introduction">Documentation
-            <svg class="icon btn__icon btn__icon--sm" aria-hidden="true" role="img" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                <use xlink:href="#arrow-forward"></use>
-            </svg></a></div>
+<header class="site-header">
+    <div class="container">
+        <div class="site-header__inner">
+            <div class="site-header__column">
+                <a class="site-header__logo" href="#">
+                    <img
+                        src="https://ui.sprucecss.com/img/cone-made-logo-dark.svg"
+                        alt="Cone Made"
+                        width="72"
+                        height="72"
+                        data-theme-mode="data-theme-mode"
+                        data-light-asset="https://ui.sprucecss.com/img/cone-made-logo-dark.svg"
+                        data-dark-asset="https://ui.sprucecss.com/img/cone-made-logo-light.svg"
+                    />
+                </a>
+                <nav
+                    class="site-navigation site-header__navigation"
+                    aria-label="Site"
+                >
+                    <button
+                        class="btn btn--primary btn--icon site-navigation__btn"
+                        data-action="navigation-toggle"
+                        aria-controls="primary-menu"
+                        aria-expanded="false"
+                        aria-label="Menu"
+                    >
+                        <svg
+                            class="icon btn__icon"
+                            aria-hidden="true"
+                            focusable="false"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 18 18"
+                            width="18"
+                            height="18"
+                            style="fill: currentColor"
+                        >
+                            <path
+                                d="M1,15l16,0c0.55,0 1,-0.45 1,-1c0,-0.55 -0.45,-1 -1,-1l-16,-0c-0.55,-0 -1,0.45 -1,1c0,0.55 0.45,1 1,1Zm-0,-5l16,-0c0.55,-0 1,-0.45 1,-1c0,-0.55 -0.45,-1 -1,-1l-16,0c-0.55,0 -1,0.45 -1,1c0,0.55 0.45,1 1,1Zm-1,-6c0,0.55 0.45,1 1,1l16,0c0.55,0 1,-0.45 1,-1c0,-0.55 -0.45,-1 -1,-1l-16,0c-0.55,0 -1,0.45 -1,1Z"
+                            ></path>
+                        </svg>
+                    </button>
+                    <ul class="navigation-menu">
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Products</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="site-header__actions">
+                <a
+                    class="site-header__email"
+                    href="mailto:hello@conedevelopment.com"
+                    >hello@conedevelopment.com</a
+                >
+                <a class="btn btn--primary" href="#">Log in</a>
+            </div>
+        </div>
     </div>
 </header>
