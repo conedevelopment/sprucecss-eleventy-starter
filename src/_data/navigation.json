@@ -1,0 +1,26 @@
+{
+  "footer": [
+    {
+      "title": "Getting Started",
+      "items": [
+        {
+          "text": "Introduction",
+          "url": "/getting-started/introduction/"
+        },
+        {
+          "text": "Setup",
+          "url": "/getting-started/setup/"
+        }
+      ]
+    },
+    {
+      "title": "Customization",
+      "items": [
+        {
+          "text": "Dark Mode",
+          "url": "/customization/dark-mode/"
+        }
+      ]
+    }
+  ]
+}
