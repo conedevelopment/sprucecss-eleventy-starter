@@ -1,0 +1,8 @@
+@use 'sprucecss/scss/spruce';
+
+.intro {
+  &__title,
+  &__description {
+    text-align: center;
+  }
+}
