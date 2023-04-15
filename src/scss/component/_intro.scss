@@ -1,8 +1,18 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .intro {
-  &__title,
-  &__description {
-    text-align: center;
+  padding-block: spacer-clamp(xl, xxl);
+
+  &__inner {
+    @include layout-stack(l);
+  }
+
+  &__caption {
+    @include layout-stack;
+    font-size: $font-size-lead;
+  }
+
+  &__title {
+    font-size: responsive-font-size(3.5rem, 30, '3vw + 1rem');
   }
 }
