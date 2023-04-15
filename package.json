@@ -3,26 +3,24 @@
   "version": "1.0.0",
   "author": "Cone (https://sprucecss.com)",
   "babel": {
-    "presets": ["latest"]
+    "presets": [
+      "latest"
+    ]
   },
   "main": ".eleventy.js",
   "scripts": {
     "delete:dist": "del-cli --force dist",
     "eleventy:dev": "npx eleventy --serve",
     "eleventy:prod": "npx eleventy",
-    "js:dev": "babel src/js -d src/build/js --watch",
-    "js:prod": "babel src/js -d src/build/js",
     "prod": "npm-run-all delete:dist eleventy:prod sass:prod",
-    "sass:dev": "sass --load-path=node_modules --watch --no-source-map --update --style=expanded src/scss:src/build/css",
+    "sass:dev": "",
     "sass:lint:fix": "stylelint src/scss/**/*.scss --fix",
     "sass:lint": "stylelint src/scss/**/*.scss",
     "sass:prod": "sass --load-path=node_modules --no-source-map --style=compressed src/scss:src/build/css",
-    "start": "npm-run-all --parallel eleventy:dev sass:dev js:dev"
+    "start": "npm-run-all --parallel eleventy:dev sass:dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "babel-cli": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
     "del-cli": "^5.0.0",
     "js-beautify": "^1.14.7",
     "moment": "^2.29.4",

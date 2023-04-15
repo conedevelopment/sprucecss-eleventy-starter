@@ -1,6 +1,7 @@
 module.exports = config => {
   config.addPassthroughCopy('./src/img/');
   config.addPassthroughCopy('./src/build/');
+  config.addPassthroughCopy('./src/js/');
   config.addPassthroughCopy('./src/font/');
 
   return {
