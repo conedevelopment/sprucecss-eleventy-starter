@@ -1,6 +1,6 @@
 (() => {
   const themeSwitcher = document.querySelector('#theme-switcher');
-  const preferredTheme = localStorage.getItem('preferred-theme') ?? 'system';
+  const preferredTheme = localStorage.getItem('preferred-theme') ? localStorage.getItem('preferred-theme') : 'system';
 
   themeSwitcher.addEventListener('click', (e) => {
     if (!e.target.matches('[data-action]')) {
