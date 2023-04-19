@@ -1,0 +1,18 @@
+{
+  "title": "Welcome to the Spruce CSS Eleventy starter theme",
+  "description": "This is a minimalistic Eleventy theme setup to help you start with your next project.",
+  "cards": [
+    {
+      "title": "Card 1",
+      "description": "This is a card"
+    },
+    {
+      "title": "Card 2",
+      "description": "This is a card"
+    },
+    {
+      "title": "Card 3",
+      "description": "This is a card"
+    }
+  ]
+}
