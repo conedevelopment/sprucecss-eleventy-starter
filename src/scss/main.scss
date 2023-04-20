@@ -1,3 +1,7 @@
 @forward 'config';
 @forward 'layout';
 @forward 'component';
+
+body {
+  background-color: pink;
+}
