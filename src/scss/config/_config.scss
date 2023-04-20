@@ -2,11 +2,13 @@
 
 @use 'sprucecss/scss/spruce' with (
   $colors: (
-    footer: (
-      background: hsl(215 100% 98%)
+    'footer': (
+      'background': hsl(215deg 100% 98%),
     )
   ),
   $dark-colors: dark.$colors,
-  $font-family-base: #{'Open Sans', sans-serif},
-  $font-family-heading: #{'Manrope', sans-serif},
+  $typography: (
+    'font-family-base': #{'Open Sans', sans-serif},
+    'font-family-heading': #{'Manrope', sans-serif},
+  ),
 );

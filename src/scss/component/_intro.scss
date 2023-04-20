@@ -1,15 +1,15 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .intro {
-  padding-block: spacer-clamp(xl, xxl);
+  padding-block: spacer-clamp('xl', 'xxl');
 
   &__inner {
-    @include layout-stack(l);
+    @include layout-stack('l');
   }
 
   &__caption {
     @include layout-stack;
-    font-size: $font-size-lead;
+    font-size: config('font-size-lead', $typography);
   }
 
   &__title {

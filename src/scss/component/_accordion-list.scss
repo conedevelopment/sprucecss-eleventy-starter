@@ -1,13 +1,13 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .accordion-list {
   &--boxed {
-    @include spruce.layout-stack(s);
+    @include layout-stack('s');
   }
 
   &--stacked {
     > * + * {
-      border-block-start: 1px solid spruce.color(border);
+      border-block-start: 1px solid color('border');
     }
   }
 }

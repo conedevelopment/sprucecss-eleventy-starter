@@ -1,11 +1,11 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .site-navigation {
   --inset-block-start: 6rem;
-  font-family: spruce.$font-family-heading;
+  font-family: config('font-family-heading', $typography);
 
   &__btn {
-    @include spruce.breakpoint(md) {
+    @include breakpoint('md') {
       display: none;
     }
 
@@ -15,31 +15,31 @@
   }
 
   ul {
-    background-color: spruce.color(background);
+    background-color: color('background');
     display: none;
     flex-direction: column;
-    gap: spruce.spacer(s);
+    gap: spacer('s');
     inset: var(--inset-block-start) 0 auto 0;
     list-style: none;
     margin: 0;
-    padding-block: spruce.spacer(m);
-    padding-inline: spruce.spacer-clamp(m, l);
+    padding-block: spacer('m');
+    padding-inline: spacer-clamp('m', 'l');
     position: absolute;
 
-    @include spruce.breakpoint(md) {
+    @include breakpoint('md') {
       align-items: center;
       background-color: transparent;
       display: flex !important;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: spruce.spacer(m);
+      gap: spacer('m');
       inset: auto;
       padding: 0;
       position: relative;
     }
 
-    @include spruce.breakpoint(lg) {
-      gap: spruce.spacer(l);
+    @include breakpoint('lg') {
+      gap: spacer('l');
     }
   }
 
@@ -48,11 +48,11 @@
   }
 
   a {
-    color: spruce.color(heading);
+    color: color('heading');
     text-decoration: none;
 
     &:hover {
-      color: spruce.color(primary);
+      color: color('primary');
     }
 
     &[aria-current='page'] {

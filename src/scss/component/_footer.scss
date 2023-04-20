@@ -1,11 +1,11 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .site-footer {
-  background-color: spruce.color(background, footer);
-  padding-block: spruce.spacer-clamp(xl, xxl);
+  background-color: color('background', 'footer');
+  padding-block: spacer-clamp('xl', 'xxl');
 
   &__top {
-    @include spruce.layout-grid(spruce.spacer(l), 14rem);
+    @include layout-grid(spacer('l'), 14rem);
   }
 
   &__logo {
@@ -16,23 +16,23 @@
   }
 
   &__title {
-    font-size: spruce.font-size(h4);
-    margin-block: 0 spruce.spacer(m);
+    font-size: font-size('h4');
+    margin-block: 0 spacer('m');
   }
 
   &__navigation {
-    @include spruce.clear-list;
-    @include spruce.layout-stack(spruce.spacer(xs));
+    @include clear-list;
+    @include layout-stack(spacer('xs'));
 
     a {
-      color: spruce.color(text);
+      color: color(text);
       text-decoration: none;
 
       &:hover,
       &:focus,
       &:active,
       &[aria-current='page'] {
-        color: spruce.color(primary);
+        color: color('primary');
       }
 
       &[aria-current='page'] {
@@ -42,12 +42,12 @@
   }
 
   &__bottom {
-    padding-block-start: spruce.spacer(l);
+    padding-block-start: spacer('l');
 
-    @include spruce.breakpoint(md) {
+    @include breakpoint('md') {
       align-items: center;
       display: flex;
-      gap: spruce.spacer(s);
+      gap: spacer('s');
       justify-content: space-between;
     }
   }

@@ -1,10 +1,10 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .container {
-  --container-width: #{spruce.$container-width};
-  --container-gap: #{spruce.spacer-clamp(m, l)};
+  --container-width: #{config('container-width', $layout)};
+  --container-gap: #{spacer-clamp(m, l)};
 
-  @include spruce.layout-center(
+  @include layout-center(
     var(--container-gap),
     var(--container-width)
   );

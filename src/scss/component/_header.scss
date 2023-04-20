@@ -1,4 +1,4 @@
-@use 'sprucecss/scss/spruce';
+@use 'sprucecss/scss/spruce' as *;
 
 .site-header {
   position: relative;
@@ -8,7 +8,7 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: spruce.spacer-clamp(s, l);
+    gap: spacer-clamp('s', 'l');
     height: var(--height);
     justify-content: space-between;
   }
@@ -17,13 +17,13 @@
     align-items: center;
     display: flex;
     flex-grow: 1;
-    gap: spruce.spacer-clamp(s, l);
+    gap: spacer-clamp('s', 'l');
   }
 
   &__actions {
     align-items: center;
     display: flex;
-    gap: spruce.spacer-clamp(s, l);
+    gap: spacer-clamp('s', 'l');
   }
 
   &__logo {
@@ -37,7 +37,7 @@
     display: none;
     text-decoration: none;
 
-    @include spruce.breakpoint(sm) {
+    @include breakpoint('sm') {
       display: inline-block;
     }
   }
@@ -45,14 +45,14 @@
   &__navigation {
     margin-inline-start: auto;
 
-    @include spruce.breakpoint(md) {
+    @include breakpoint('md') {
       margin-inline-start: 0;
     }
 
     ul {
-      border-block-start: 1px solid spruce.color(border);
+      border-block-start: 1px solid color('border');
 
-      @include spruce.breakpoint(sm) {
+      @include breakpoint('sm') {
         border-block: none;
       }
     }
