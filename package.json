@@ -13,10 +13,10 @@
     "eleventy:dev": "npx eleventy --serve",
     "eleventy:prod": "npx eleventy",
     "prod": "npm-run-all delete:dist eleventy:prod sass:prod",
-    "sass:dev": "sass --load-path=node_modules --watch --no-source-map --update --style=expanded src/scss:src/build/css",
+    "sass:dev": "sass --load-path=node_modules --watch --no-source-map --update --style=expanded src/scss:src/css",
     "sass:lint:fix": "stylelint src/scss/**/*.scss --fix",
     "sass:lint": "stylelint src/scss/**/*.scss",
-    "sass:prod": "sass --load-path=node_modules --no-source-map --style=compressed src/scss:src/build/css",
+    "sass:prod": "sass --load-path=node_modules --no-source-map --style=compressed src/scss:src/css",
     "start": "npm-run-all --parallel eleventy:dev sass:dev"
   },
   "devDependencies": {

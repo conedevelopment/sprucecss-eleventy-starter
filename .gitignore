@@ -176,4 +176,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # Generated folders
-src/build
+src/css

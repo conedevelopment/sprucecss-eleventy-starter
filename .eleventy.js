@@ -4,7 +4,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = config => {
   config.addPassthroughCopy('./src/img/');
-  config.addPassthroughCopy('./src/build/');
+  config.addPassthroughCopy('./src/css/');
   config.addPassthroughCopy('./src/js/');
   config.addPassthroughCopy('./src/font/');
 
