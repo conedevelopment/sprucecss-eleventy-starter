@@ -34,9 +34,6 @@ $colors: (
     'secondary-background-hover': color.adjust($color-secondary, $lightness: 5%),
     'secondary-foreground': $color-white,
   ),
-  'footer': (
-    'background': hsl(206deg 100% 5%),
-  ),
   'form': (
     'background': color.scale($color-black, $lightness: 5%),
     'background-disabled': $color-black,

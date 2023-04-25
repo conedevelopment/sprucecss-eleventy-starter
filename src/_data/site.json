@@ -2,12 +2,5 @@
   "authorEmail": "hello@conedevelopment.com",
   "authorName": "Cone",
   "copyright": "Some rights reserved",
-  "name": "Spruce CSS Eleventy Starter",
-  "slogen": "An Eleventy theme for documentation sites",
-  "social": {
-    "twitter": "https://twitter.com/conedevelopment",
-    "github": "https://github.com/conedevelopment",
-    "discord": "https://github.com/conedevelopment"
-  },
-  "url": "https://conedevelopment.com"
+  "name": "Spruce CSS Eleventy Starter"
 }
