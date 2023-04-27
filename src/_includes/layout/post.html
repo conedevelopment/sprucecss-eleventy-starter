@@ -5,6 +5,7 @@
         <div class="container">
             <div class="l-post__inner">
                 {% set postHeadingTitle = title %}
+                {% set postHeadingPubDate = date %}
                 {% include "partial/post-heading.html" %}
                 <div class="post-content">
                     {{ content | safe }}
