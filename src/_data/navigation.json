@@ -1,14 +1,32 @@
 {
+  "header": [
+    {
+      "caption": "Home",
+      "url": "/"
+    },
+    {
+      "caption": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "caption": "About",
+      "url": "/about/"
+    },
+    {
+      "caption": "Contact",
+      "url": "/contact/"
+    }
+  ],
   "footer": [
     {
       "title": "Getting Started",
       "items": [
         {
-          "text": "Introduction",
+          "caption": "Introduction",
           "url": "/getting-started/introduction/"
         },
         {
-          "text": "Setup",
+          "caption": "Setup",
           "url": "/getting-started/setup/"
         }
       ]
@@ -17,7 +35,7 @@
       "title": "Customization",
       "items": [
         {
-          "text": "Dark Mode",
+          "caption": "Dark Mode",
           "url": "/customization/dark-mode/"
         }
       ]

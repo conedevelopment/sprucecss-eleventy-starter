@@ -1,7 +1,7 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .intro {
-  padding-block: spacer-clamp('xl', 'xxl');
+  padding-block: get-css-variable(--section-gap);
 
   &__inner {
     @include layout-stack('l');

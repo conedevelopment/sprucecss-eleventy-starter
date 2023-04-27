@@ -3,15 +3,15 @@
   "description": "This is a minimalistic Eleventy theme setup to help you start with your next project.",
   "cards": [
     {
-      "title": "Card 1",
+      "title": "Getting Started",
       "description": "This is a card"
     },
     {
-      "title": "Card 2",
+      "title": "What's Included",
       "description": "This is a card"
     },
     {
-      "title": "Card 3",
+      "title": "Dark Mode Configuration",
       "description": "This is a card"
     }
   ]

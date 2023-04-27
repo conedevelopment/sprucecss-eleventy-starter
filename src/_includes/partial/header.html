@@ -26,20 +26,18 @@
                     >
                         {% svgIcon './src/img/icon/menu.svg', 'btn__icon' %}
                     </button>
+
+                    {% if navigation.header.length > 0 %}
                     <ul class="navigation-menu">
+                        {% for item in navigation.header %}
                         <li>
-                            <a href="#">Services</a>
+                            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                            >{{ item.caption }}</a
+                            >
                         </li>
-                        <li>
-                            <a href="#">Products</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
+                        {% endfor %}
                     </ul>
+                    {% endif %}
                 </nav>
             </div>
             <div class="site-header__actions">

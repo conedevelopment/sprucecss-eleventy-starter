@@ -1,0 +1,11 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.l-post {
+  padding-block: get-css-variable(--section-gap);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: spacer('l');
+  }
+}
