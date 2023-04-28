@@ -1,0 +1,15 @@
+<svg
+    aria-hidden="true"
+    focusable="false"
+    role="img"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style="fill: currentColor"
+    width="24"
+    height="24"
+>
+    <path
+        d="M8,0l0,3.2l10.544,0l-18.544,18.544l2.256,2.256l18.544,-18.544l0,10.544l3.2,0l0,-16l-16,0Z"
+    ></path>
+</svg>

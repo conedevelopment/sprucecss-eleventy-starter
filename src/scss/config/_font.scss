@@ -7,12 +7,6 @@
 
 @include font-face(
   'Manrope',
-  '../../font/manrope-v13-latin_latin-ext-300.woff2',
-  300
-);
-
-@include font-face(
-  'Manrope',
   '../../font/manrope-v13-latin_latin-ext-600.woff2',
   600
 );
@@ -21,12 +15,6 @@
   'Manrope',
   '../../font/manrope-v13-latin_latin-ext-700.woff2',
   700
-);
-
-@include font-face(
-  'Manrope',
-  '../../font/manrope-v13-latin_latin-ext-800.woff2',
-  800
 );
 
 @include font-face(

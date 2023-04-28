@@ -9,13 +9,6 @@
   font-display: swap;
   font-family: "Manrope";
   font-style: normal;
-  font-weight: 300;
-  src: url("../../font/manrope-v13-latin_latin-ext-300.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Manrope";
-  font-style: normal;
   font-weight: 600;
   src: url("../../font/manrope-v13-latin_latin-ext-600.woff2") format("woff2");
 }
@@ -25,13 +18,6 @@
   font-style: normal;
   font-weight: 700;
   src: url("../../font/manrope-v13-latin_latin-ext-700.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../../font/manrope-v13-latin_latin-ext-800.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
@@ -436,6 +422,10 @@ template {
   --spruce-x-11ty-table-color-hover: hsla(0, 0%, 0%, 0.05);
   --spruce-x-11ty-table-color-stripe: hsla(0, 0%, 0%, 0.025);
   --spruce-x-11ty-table-color-text: hsl(208, 9%, 42%);
+}
+
+:root {
+  --spruce-x-11ty-navigation-color-arrow: hsla(0, 0%, 0%, 0.25);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1474,6 +1464,10 @@ legend {
 }
 
 :root[data-theme-mode=dark] {
+  --spruce-x-11ty-navigation-color-arrow: hsla(0, 0%, 100%, 0.25);
+}
+
+:root[data-theme-mode=dark] {
   --spruce-x-11ty-selection-color-background: hsl(261, 54%, 70%);
   --spruce-x-11ty-selection-color-foreground: hsl(0, 0%, 95%);
 }
@@ -1585,7 +1579,10 @@ legend {
   margin-block: 0;
 }
 .site-navigation a {
+  align-items: center;
   color: var(--spruce-x-11ty-base-color-heading);
+  display: flex;
+  gap: 0.5rem;
   text-decoration: none;
 }
 .site-navigation a:hover {
@@ -1593,6 +1590,12 @@ legend {
 }
 .site-navigation a[aria-current=page] {
   font-weight: 700;
+}
+.site-navigation a svg {
+  --dimension: 0.75em;
+  color: var(--spruce-x-11ty-navigation-color-arrow);
+  height: var(--dimension);
+  width: var(--dimension);
 }
 
 .theme-switcher {

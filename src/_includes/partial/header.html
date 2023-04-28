@@ -4,13 +4,13 @@
             <div class="site-header__column">
                 <a class="site-header__logo" href="/">
                     <img
-                        src="https://ui.sprucecss.com/img/cone-made-logo-dark.svg"
+                        src="/img/cone-made-logo-dark.svg"
                         alt="Cone Made"
                         width="72"
                         height="72"
                         data-theme-mode="data-theme-mode"
-                        data-light-asset="https://ui.sprucecss.com/img/cone-made-logo-dark.svg"
-                        data-dark-asset="https://ui.sprucecss.com/img/cone-made-logo-light.svg"
+                        data-light-asset="/img/cone-made-logo-dark.svg"
+                        data-dark-asset="/img/cone-made-logo-light.svg"
                     />
                 </a>
                 <nav
@@ -31,9 +31,19 @@
                     <ul class="navigation-menu">
                         {% for item in navigation.header %}
                         <li>
-                            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-                            >{{ item.caption }}</a
+                            <a
+                                href="{{ item.url }}"
+                                {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                                {% if item.external %}
+                                    target="_blank"
+                                    rel="noopener"
+                                {% endif %}
                             >
+                                {{ item.caption }}
+                                {% if item.external %}
+                                    {% svgIcon './src/img/icon/north-east.svg', 'btn__icon' %}
+                                {% endif %}
+                            </a>
                         </li>
                         {% endfor %}
                     </ul>

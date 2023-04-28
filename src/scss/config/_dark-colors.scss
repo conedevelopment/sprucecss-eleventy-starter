@@ -62,6 +62,9 @@ $colors: (
     'valid': $color-success,
     'valid-focus-ring': color.adjust($color-success, $alpha: -0.75),
   ),
+  'navigation': (
+    'arrow': hsl(0deg 0% 100% / 25%),
+  ),
   'selection': (
     'background': $color-primary,
     'foreground': $color-white,
