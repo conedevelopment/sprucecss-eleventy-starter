@@ -1,17 +1,12 @@
 <div class="post-heading">
     <div class="post-heading__inner">
-        <h1 class="post-heading__title">{{ postHeadingTitle }}</h1>
+        <h1 class="post-heading__title">{{ title }}</h1>
         {% if showMeta %}
             <div class="post-heading__meta">
-                <a class="post-author" href="#">
-                    <img class="post-author__avatar" src="https://secure.gravatar.com/avatar/fd9479a898c593601efd2fe758a86dba?s=96&amp;d=mm&amp;r=g" alt="" aria-hidden="true" width="38" height="38" />
-                    <span class="post-author__name">by Adam Laki</span>
-                </a>
-                <span>Posted in <a href="#">Business</a>, <a href="#">Notes</a>
-                </span>
+                {% include "partial/tags.html" %}
                 <span>
                     <span class="sr-only">Posted on</span>
-                    <time datetime="2022-03-17T11:47:25+01:00">Mar 17, 2022</time>
+                    <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter('en') }}</time>
                 </span>
             </div>
         {% endif %}
