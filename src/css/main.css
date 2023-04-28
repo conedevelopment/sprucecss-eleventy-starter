@@ -1906,7 +1906,7 @@ legend {
   justify-content: center;
 }
 .post-heading__title {
-  font-size: clamp(3.15rem, 5vw + 1rem, 4.5rem);
+  font-size: clamp(2.925rem, 5vw + 1rem, 4.5rem);
   margin-block: 0;
 }
 .post-heading__meta {
