@@ -3,35 +3,38 @@
 {% set posts = pagination.items %}
 
 {% if collections[ tag ] %}
-  {% set posts = collections[tag].reverse() %}
-  {% set title = 'Posts tagged with: ' + tag %}
+    {% set posts = collections[tag].reverse() %}
+    {% set title = 'Posts tagged with: ' + tag %}
 {% endif %}
 
 {% block content %}
-  <div class="l-page">
-    <h1 class="l-page__title {% if tag %}l-page__title--regular{% endif %}">{{ title }}</h1>
-    <ol class="l-page__list">
-      {% for post in posts %}
-        {% set tags = post.data.tags %}
-        <li>
-          <div class="blog-card">
-            <h2 class="blog-card__title">
-              <a href="{{ post.url }}" class="blog-card__link">
-                {{ post.data.title }}
-              </a>
-            </h2>
-            <div class="blog-card__meta">
-              {% if post.data.date %}
-                <time datetime="{{ post.data.date | w3DateFilter }}">{{ post.data.date | dateFilter('en') }}</time>
-              {% endif %}
-              {% include "partial/tags.html" %}
-            </div>
-          </div>
-        </li>
-      {% endfor %}
-    </ol>
-    {% if not tag %}
-      {% include "partial/pagination.html" %}
-    {% endif %}
-  </div>
+    <div class="l-post">
+        <div class="container container--narrow">
+            {% set postHeadingTitle = title %}
+            {% include "partial/post-heading.html" %}
+            <ol class="l-post__list">
+                {% for post in posts %}
+                    {% set tags = post.data.tags %}
+                    <li>
+                        <div class="blog-card">
+                            <h2 class="blog-card__title">
+                                <a href="{{ post.url }}" class="blog-card__link">
+                                    {{ post.data.title }}
+                                </a>
+                            </h2>
+                            <div class="blog-card__meta">
+                                {% if post.data.date %}
+                                    <time datetime="{{ post.data.date | w3DateFilter }}">{{ post.data.date | dateFilter('en') }}</time>
+                                {% endif %}
+                                {% include "partial/tags.html" %}
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ol>
+            {% if not tag %}
+                {% include "partial/pagination.html" %}
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}

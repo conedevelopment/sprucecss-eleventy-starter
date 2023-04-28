@@ -387,6 +387,11 @@ template {
   --spruce-x-11ty-btn-color-secondary-background: hsl(227, 92%, 55%);
   --spruce-x-11ty-btn-color-secondary-background-hover: #0937dc;
   --spruce-x-11ty-btn-color-secondary-foreground: hsl(0, 0%, 100%);
+  --spruce-x-11ty-btn-color-pagination-background: hsl(263, 40%, 96%);
+  --spruce-x-11ty-btn-color-pagination-background-hover: hsl(262, 71%, 49%);
+  --spruce-x-11ty-btn-color-pagination-foreground: hsl(262, 71%, 49%);
+  --spruce-x-11ty-btn-color-pagination-foreground-hover: hsl(0, 0%, 100%);
+  --spruce-x-11ty-btn-color-pagination-focus-ring: hsl(262, 71%, 49%);
 }
 
 :root {
@@ -1419,7 +1424,7 @@ legend {
   --spruce-x-11ty-base-color-code-foreground: hsl(0, 0%, 95%);
   --spruce-x-11ty-base-color-heading: hsl(0, 0%, 95%);
   --spruce-x-11ty-base-color-link: hsl(261, 54%, 70%);
-  --spruce-x-11ty-base-color-link-hover: #7d52cb;
+  --spruce-x-11ty-base-color-link-hover: #b8a1e3;
   --spruce-x-11ty-base-color-mark-background: hsl(50, 100%, 80%);
   --spruce-x-11ty-base-color-mark-foreground: hsl(206, 100%, 7%);
   --spruce-x-11ty-base-color-marker: hsl(261, 54%, 70%);
@@ -1691,6 +1696,101 @@ legend {
   color: var(--spruce-x-11ty-base-color-text);
 }
 
+.form-group-wrapper > * {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.form-group-wrapper > * + * {
+  margin-block-start: 1rem;
+}
+
+.pagination a {
+  align-items: center;
+  border-radius: 0.325rem;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: 0.5rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-align: start;
+  text-decoration: none;
+  transition-duration: var(--spruce-x-11ty-duration);
+  transition-property: background-color, border-color, box-shadow, color;
+  transition-timing-function: var(--spruce-x-11ty-timing-function);
+}
+
+.pagination a:focus {
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.pagination a:disabled,
+.pagination a--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.pagination a--sm {
+  font-size: 0.8rem;
+  gap: 0.25rem;
+  padding: 0.5em 0.75em;
+}
+
+.pagination a--lg {
+  gap: 0.5rem;
+  padding: 0.9em 1.15em;
+}
+@media (min-width: 64em) {
+  .pagination a--lg {
+    font-size: 1.15rem;
+  }
+}
+
+.pagination a--block {
+  width: 100%;
+}
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-block-start: 3rem;
+}
+.pagination > * + * {
+  margin-block-start: 0;
+}
+.pagination a {
+  background-color: var(--spruce-x-11ty-btn-color-pagination-background);
+  border-color: var(--spruce-x-11ty-btn-color-pagination-background);
+  color: var(--spruce-x-11ty-btn-color-pagination-foreground);
+}
+.pagination a:focus-visible {
+  outline: 2px solid var(--spruce-x-11ty-btn-color-pagination-focus-ring);
+  outline-offset: 2px;
+}
+.pagination a:hover {
+  background-color: var(--spruce-x-11ty-btn-color-pagination-background-hover);
+  border-color: var(--spruce-x-11ty-btn-color-pagination-background-hover);
+  color: var(--spruce-x-11ty-btn-color-pagination-foreground-hover);
+}
+.pagination a [aria-current=page] {
+  background: var(--spruce-x-11ty-btn-color-pagination-background-hover);
+  border-color: var(--spruce-x-11ty-btn-color-pagination-background-hover);
+  color: var(--spruce-x-11ty-btn-color-pagination-foreground-hover);
+}
+.pagination a--sm {
+  min-width: 1.75rem;
+}
+
 .blog-card > * {
   margin-block-end: 0;
   margin-block-start: 0;
@@ -1829,7 +1929,7 @@ legend {
     font-size: 1.0375rem;
   }
 }
-.post-content :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p:not(p:has(img)), blockquote) {
+.post-content :is(dd, dl, dl, h1, h2, h3, h4, h5, h6, hr, ul, ol, p:not(p:has(img)), blockquote, form) {
   margin-inline: auto;
   max-width: 40rem;
 }
@@ -1906,6 +2006,10 @@ legend {
 }
 .site-footer__copyright {
   margin-block: 0;
+}
+
+.m-block\:0 {
+  margin-block: 0 !important;
 }
 
 :root {
