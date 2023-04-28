@@ -389,9 +389,9 @@ template {
   --spruce-x-11ty-btn-color-secondary-foreground: hsl(0, 0%, 100%);
   --spruce-x-11ty-btn-color-pagination-background: hsl(263, 40%, 96%);
   --spruce-x-11ty-btn-color-pagination-background-hover: hsl(262, 71%, 49%);
+  --spruce-x-11ty-btn-color-pagination-focus-ring: hsl(262, 71%, 49%);
   --spruce-x-11ty-btn-color-pagination-foreground: hsl(262, 71%, 49%);
   --spruce-x-11ty-btn-color-pagination-foreground-hover: hsl(0, 0%, 100%);
-  --spruce-x-11ty-btn-color-pagination-focus-ring: hsl(262, 71%, 49%);
 }
 
 :root {
@@ -786,8 +786,9 @@ samp {
   border-width: 1px;
   cursor: pointer;
   display: inline-flex;
+  font-family: Manrope, sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   gap: 0.5rem;
   justify-content: center;
   line-height: 1;
@@ -915,8 +916,9 @@ samp {
   border-width: 1px;
   cursor: pointer;
   display: inline-flex;
+  font-family: Manrope, sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   gap: 0.5rem;
   justify-content: center;
   line-height: 1;
@@ -1430,10 +1432,15 @@ legend {
   --spruce-x-11ty-base-color-marker: hsl(261, 54%, 70%);
   --spruce-x-11ty-base-color-primary: hsl(261, 54%, 70%);
   --spruce-x-11ty-base-color-secondary: hsl(227, 92%, 55%);
-  --spruce-x-11ty-base-color-text: hsl(0, 0%, 97%);
+  --spruce-x-11ty-base-color-text: hsl(0, 0%, 90%);
 }
 
 :root[data-theme-mode=dark] {
+  --spruce-x-11ty-btn-color-pagination-background: hsl(206, 100%, 12%);
+  --spruce-x-11ty-btn-color-pagination-background-hover: hsl(261, 54%, 70%);
+  --spruce-x-11ty-btn-color-pagination-focus-ring: hsl(261, 54%, 70%);
+  --spruce-x-11ty-btn-color-pagination-foreground: hsl(0, 0%, 95%);
+  --spruce-x-11ty-btn-color-pagination-foreground-hover: hsl(0, 0%, 95%);
   --spruce-x-11ty-btn-color-primary-background: hsl(261, 52%, 59%);
   --spruce-x-11ty-btn-color-primary-background-hover: hsl(261, 52%, 65%);
   --spruce-x-11ty-btn-color-primary-foreground: hsl(0, 0%, 95%);
@@ -1461,7 +1468,7 @@ legend {
   --spruce-x-11ty-form-color-range-track-background: hsla(0, 0%, 100%, 0.08);
   --spruce-x-11ty-form-color-ring-focus: rgba(166, 137, 220, 0.25);
   --spruce-x-11ty-form-color-select-foreground: hsl(0, 0%, 100%);
-  --spruce-x-11ty-form-color-text: hsl(0, 0%, 97%);
+  --spruce-x-11ty-form-color-text: hsl(0, 0%, 90%);
   --spruce-x-11ty-form-color-valid: hsl(150, 100%, 33%);
   --spruce-x-11ty-form-color-valid-focus-ring: rgba(0, 168, 84, 0.25);
 }
@@ -1479,10 +1486,10 @@ legend {
 
 :root[data-theme-mode=dark] {
   --spruce-x-11ty-table-color-border: hsla(0, 0%, 100%, 0.08);
-  --spruce-x-11ty-table-color-caption: hsl(0, 0%, 97%);
+  --spruce-x-11ty-table-color-caption: hsl(0, 0%, 90%);
   --spruce-x-11ty-table-color-heading: hsl(0, 0%, 95%);
   --spruce-x-11ty-table-color-hover: hsla(0, 0%, 100%, 0.05);
-  --spruce-x-11ty-table-color-text: hsl(0, 0%, 97%);
+  --spruce-x-11ty-table-color-text: hsl(0, 0%, 90%);
   --spruce-x-11ty-table-color-stripe: hsla(0, 0%, 100%, 0.025);
 }
 
@@ -1511,6 +1518,17 @@ legend {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+.l-post__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 3rem;
+}
+.l-post__list > * + * {
+  border-block-start: 1px dashed var(--spruce-x-11ty-base-color-border);
+  margin-block-start: 1.5rem;
+  padding-block-start: 1.5rem;
 }
 
 .skip-link {
@@ -1711,8 +1729,9 @@ legend {
   border-width: 1px;
   cursor: pointer;
   display: inline-flex;
+  font-family: Manrope, sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   gap: 0.5rem;
   justify-content: center;
   line-height: 1;
@@ -1782,7 +1801,7 @@ legend {
   border-color: var(--spruce-x-11ty-btn-color-pagination-background-hover);
   color: var(--spruce-x-11ty-btn-color-pagination-foreground-hover);
 }
-.pagination a [aria-current=page] {
+.pagination a[aria-current=page] {
   background: var(--spruce-x-11ty-btn-color-pagination-background-hover);
   border-color: var(--spruce-x-11ty-btn-color-pagination-background-hover);
   color: var(--spruce-x-11ty-btn-color-pagination-foreground-hover);
@@ -1791,22 +1810,35 @@ legend {
   min-width: 1.75rem;
 }
 
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tags > * + * {
+  margin-block-start: 0;
+}
+
 .blog-card > * {
   margin-block-end: 0;
   margin-block-start: 0;
 }
 .blog-card > * + * {
-  margin-block-start: 0.25rem;
+  margin-block-start: 0.5rem;
 }
 .blog-card__title {
   font-family: Open Sans, sans-serif;
 }
 .blog-card__link {
-  color: var(--spruce-x-11ty-base-color-text);
+  color: var(--spruce-x-11ty-base-color-heading);
   text-decoration: none;
 }
 .blog-card__link:hover, .blog-card__link:focus {
-  color: var(--spruce-x-11ty-base-color-text);
+  color: var(--spruce-x-11ty-base-color-heading);
 }
 .blog-card__meta {
   align-items: center;

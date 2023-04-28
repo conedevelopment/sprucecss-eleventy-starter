@@ -4,7 +4,7 @@
 
 {% if collections[ tag ] %}
     {% set posts = collections[tag].reverse() %}
-    {% set title = 'Posts tagged with: ' + tag %}
+    {% set title = 'Tagged with: ' + tag %}
 {% endif %}
 
 {% block content %}

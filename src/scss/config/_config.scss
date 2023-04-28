@@ -1,16 +1,20 @@
 @use 'dark-colors' as dark;
 
 @use 'sprucecss/scss/spruce' with (
-  $dark-colors: dark.$colors,
+  $btn: (
+    'font-family': #{'Manrope', sans-serif},
+    'font-weight': 600,
+  ),
   $colors: (
     'btn': (
       'pagination-background': hsl(263deg 40% 96%),
       'pagination-background-hover': hsl(262deg 71% 49%),
+      'pagination-focus-ring': hsl(262deg 71% 49%),
       'pagination-foreground': hsl(262deg 71% 49%),
       'pagination-foreground-hover': hsl(0deg 0% 100%),
-      'pagination-focus-ring': hsl(262deg 71% 49%),
     ),
   ),
+  $dark-colors: dark.$colors,
   $settings: (
     'prefix': 'spruce-x-11ty'
   ),

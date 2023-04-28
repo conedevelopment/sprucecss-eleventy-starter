@@ -1,19 +1,19 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .blog-card {
-  @include layout-stack('xxs');
+  @include layout-stack('xs');
 
   &__title {
     font-family: config('font-family-base', $typography);
   }
 
   &__link {
-    color: color('text');
+    color: color('heading');
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: color('text');
+      color: color('heading');
     }
   }
 

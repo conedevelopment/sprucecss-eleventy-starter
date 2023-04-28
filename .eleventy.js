@@ -1,12 +1,12 @@
 require('dotenv').config();
 
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const dateFilter = require('./src/filters/date-filter.js');
-const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const { parse, stringify } = require('himalaya');
+const dateFilter = require('./src/filters/date-filter.js');
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 const Image = require('@11ty/eleventy-img');
 const isProduction = process.env.NODE_ENV === 'production';
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
 module.exports = config => {
   config.addFilter('dateFilter', dateFilter);
