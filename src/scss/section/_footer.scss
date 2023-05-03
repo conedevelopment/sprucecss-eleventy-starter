@@ -24,7 +24,10 @@
     @include layout-stack(spacer('xs'));
 
     a {
+      align-items: center;
       color: color(text);
+      display: flex;
+      gap: spacer('xs');
       text-decoration: none;
 
       &:hover,
@@ -36,6 +39,13 @@
 
       &[aria-current='page'] {
         font-weight: 700;
+      }
+
+      svg {
+        --dimension: 0.65em;
+        color: color('arrow', 'navigation');
+        height: var(--dimension);
+        width: var(--dimension);
       }
     }
   }

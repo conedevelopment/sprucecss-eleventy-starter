@@ -41,7 +41,8 @@
                             >
                                 {{ item.caption }}
                                 {% if item.external %}
-                                    {% svgIcon './src/img/icon/north-east.svg', 'btn__icon' %}
+                                    <span class="sr-only">Open in new window</span>
+                                    {% svgIcon './src/img/icon/arrow-outward.svg', 'btn__icon' %}
                                 {% endif %}
                             </a>
                         </li>

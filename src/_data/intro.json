@@ -1,10 +1,10 @@
 {
   "title": "Welcome to the Spruce CSS Eleventy starter theme",
-  "description": "This is a minimalistic Eleventy theme setup to help you start with your next project.",
+  "description": "This is a minimalistic Eleventy boilerplate setup to help you start with your next project.",
   "cards": [
     {
       "title": "Getting Started",
-      "description": "This is a card"
+      "description": "te"
     },
     {
       "title": "What's Included",

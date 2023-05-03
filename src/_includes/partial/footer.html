@@ -14,72 +14,37 @@
                     />
                 </a>
             </div>
+            {% for block in navigation.footer %}
             <div class="site-footer__col">
-                <h3 class="site-footer__title" id="site-footer-title-01">
-                    Getting Started
+                <h3 class="site-footer__title" id="site-footer-title-{{ block.title | slugify }}">
+                    {{ block.title }}
                 </h3>
-                <ul
-                    class="site-footer__navigation"
-                    aria-labelledby="site-footer-title-01"
-                >
-                    <li>
-                        <a href="#">Introduction</a>
-                    </li>
-                    <li>
-                        <a href="#">Installation</a>
-                    </li>
-                    <li>
-                        <a href="#">Structure and Code</a>
-                    </li>
-                    <li>
-                        <a href="#">Sass</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="site-footer__col">
-                <h3 class="site-footer__title" id="site-footer-title-02">
-                    Elements
-                </h3>
+
                 <ul
                     class="site-footer__navigation"
                     aria-labelledby="site-footer-title-02"
                 >
+                    {% for item in block.items %}
                     <li>
-                        <a href="#">Typography</a>
+                        <a
+                            href="{{ item.url }}"
+                            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                            {% if item.external %}
+                                target="_blank"
+                                rel="noopener"
+                            {% endif %}
+                        >
+                            {{ item.caption }}
+                            {% if item.external %}
+                                <span class="sr-only">Open in new window</span>
+                                {% svgIcon './src/img/icon/arrow-outward.svg', 'btn__icon' %}
+                            {% endif %}
+                        </a>
                     </li>
-                    <li>
-                        <a href="#">Tables</a>
-                    </li>
-                    <li>
-                        <a href="#">Buttons</a>
-                    </li>
-                    <li>
-                        <a href="#">Forms</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
-            <div class="site-footer__col">
-                <h3 class="site-footer__title" id="site-footer-title-03">
-                    More From Us
-                </h3>
-                <ul
-                    class="site-footer__navigation"
-                    aria-labelledby="site-footer-title-03"
-                >
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Pine - A web development blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Root - An admin package for Laravel</a>
-                    </li>
-                    <li>
-                        <a href="#">Bite-Sized Accessibility</a>
-                    </li>
-                </ul>
-            </div>
+            {% endfor %}
         </div>
         <div class="site-footer__bottom">
             <p class="site-footer__copyright">

@@ -14,10 +14,10 @@ module.exports = config => {
 
   config.addPlugin(syntaxHighlight);
 
-  config.addPassthroughCopy('./src/img/');
-  config.addPassthroughCopy('./src/css/');
-  config.addPassthroughCopy('./src/js/');
-  config.addPassthroughCopy('./src/font/');
+  config.addPassthroughCopy('./src/img/**');
+  config.addPassthroughCopy('./src/css/**');
+  config.addPassthroughCopy('./src/js/**');
+  config.addPassthroughCopy('./src/font/**');
 
   config.addCollection('blog', collection => {
     return [...collection.getFilteredByGlob('./src/posts/*.md')];
@@ -36,7 +36,7 @@ module.exports = config => {
     });
 
     return stringify(svg);
-  })
+  });
 
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform);
