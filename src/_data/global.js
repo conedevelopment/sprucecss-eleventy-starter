@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 module.exports = {
   random() {
     return crypto.randomUUID();
