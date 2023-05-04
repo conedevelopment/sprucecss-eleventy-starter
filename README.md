@@ -18,7 +18,7 @@
 - [Table of Contents](#table-of-contents)
 - [Get Up and Running](#get-up-and-running)
 - [SCSS](#scss)
-- [More Scripts](#more-scripts)
+- [Other Scripts](#other-scripts)
 - [License](#license)
 
 ## Get Up and Running
@@ -45,7 +45,7 @@ We use `eleventy --serve` and compile Sass with sass-cli with npm scripts.
 
 4. **Run the production mode**
 
-To go live, you should use the production script to compress the Sass files.
+Before you go live, you should use the production script to compress the Sass files.
 
     ```shell
     npm run prod
@@ -55,11 +55,11 @@ To go live, you should use the production script to compress the Sass files.
 
 The project compiles the SCSS files from the `./src/scss` folder into the `./src/css` folder. The project includes [Spruce CSS](https://sprucecss.com/), which gives the styling with some [Spruce UI](https://sprucecss.com/ui/getting-started/introduction/) components.
 
-## More Scripts
+## Other Scripts
 
-**sass:lint/sass:lint:fix** You can lint your SCSS files with [Stylelint](https://stylelint.io/) and [stylelint-config-sass-guidelines](https://github.com/bjankord/stylelint-config-sass-guidelines) preset with the `npm run sass:lint` command. Use the `npm run sass:lint:fix` command if you want automatic fixes.
+- **sass:lint/sass:lint:fix** You can lint your SCSS files with [Stylelint](https://stylelint.io/) and [stylelint-config-sass-guidelines](https://github.com/bjankord/stylelint-config-sass-guidelines) preset with the `npm run sass:lint` command. Use the `npm run sass:lint:fix` command if you want automatic fixes.
 
-**js:lint/js:lint:fix** You can also lint your JS like with Sass. For the rules, we use the Airbnb preset.
+- **js:lint/js:lint:fix** You can also lint your JS like with Sass. For the rules, we use the Airbnb preset.
 
 ## License
 
