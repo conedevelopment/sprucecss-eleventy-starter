@@ -45,7 +45,7 @@ We use `eleventy --serve` and compile Sass with sass-cli with npm scripts.
 
 4. **Run the production mode**
 
-Before you go live, you should use the production script to compress the Sass files.
+    Before you go live, you should use the production script to compress the Sass files.
 
     ```shell
     npm run prod
