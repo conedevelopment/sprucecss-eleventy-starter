@@ -29,7 +29,6 @@
   }
 
   &__title {
-    font-family: config('font-family-base', $typography);
     font-size: font-size('h4');
     margin-block: 0;
     padding-block: spacer('m');
@@ -73,7 +72,11 @@
   }
 
   &__content {
-    @include layout-stack('xs');
+    @include layout-stack('s');
     padding-block-end: spacer('m');
+
+    * + h3 {
+      margin-block-start: spacer('m');
+    }
   }
 }

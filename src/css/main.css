@@ -1664,7 +1664,6 @@ legend {
   padding: 0;
 }
 .accordion-card__title {
-  font-family: Open Sans, sans-serif;
   font-size: clamp(1.0625rem, 2vw + 1rem, 1.25rem);
   margin-block: 0;
   padding-block: 1.5rem;
@@ -1709,7 +1708,10 @@ legend {
   margin-block-start: 0;
 }
 .accordion-card__content > * + * {
-  margin-block-start: 0.5rem;
+  margin-block-start: 1rem;
+}
+.accordion-card__content * + h3 {
+  margin-block-start: 1.5rem;
 }
 
 .post-author {
