@@ -1493,6 +1493,20 @@ legend {
 }
 
 :root[data-theme-mode=dark] {
+  --spruce-x-11ty-prism-color-color: hsl(217, 34%, 88%);
+  --spruce-x-11ty-prism-color-background: hsl(207, 83%, 10%);
+  --spruce-x-11ty-prism-color-comment: hsl(180, 9%, 55%);
+  --spruce-x-11ty-prism-color-punctuation: hsl(276, 68%, 75%);
+  --spruce-x-11ty-prism-color-namespace: hsl(197, 31%, 77%);
+  --spruce-x-11ty-prism-color-deleted: hsla(1, 83%, 63%, 0.56);
+  --spruce-x-11ty-prism-color-boolean: hsl(350, 100%, 67%);
+  --spruce-x-11ty-prism-color-number: hsl(14, 90%, 70%);
+  --spruce-x-11ty-prism-color-constant: hsl(221, 100%, 75%);
+  --spruce-x-11ty-prism-color-class-name: hsl(33, 100%, 77%);
+  --spruce-x-11ty-prism-color-regex: hsl(217, 34%, 88%);
+}
+
+:root[data-theme-mode=dark] {
   --spruce-x-11ty-table-color-border: hsla(0, 0%, 100%, 0.08);
   --spruce-x-11ty-table-color-caption: hsl(0, 0%, 90%);
   --spruce-x-11ty-table-color-heading: hsl(0, 0%, 95%);

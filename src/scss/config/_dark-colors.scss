@@ -74,6 +74,19 @@ $colors: (
     'thumb-background-hover':	hsl(0deg 0% 100% / 25%),
     'track-background':	hsl(0deg 0% 100% / 5%),
   ),
+  'prism': (
+    'color': hsl(217deg 34% 88%),
+    'background': hsl(207deg 83% 10%),
+    'comment': hsl(180deg 9% 55%),
+    'punctuation': hsl(276deg 68% 75%),
+    'namespace': hsl(197deg 31% 77%),
+    'deleted': hsl(1deg 83% 63% / 56%),
+    'boolean': hsl(350deg 100% 67%),
+    'number': hsl(14deg 90% 70%),
+    'constant': hsl(221deg 100% 75%),
+    'class-name': hsl(33deg 100% 77%),
+    'regex': hsl(217deg 34% 88%)
+  ),
   'table': (
     'border': $color-gray-dark,
     'caption': $color-gray,
@@ -81,5 +94,5 @@ $colors: (
     'hover': hsl(0deg 0% 100% / 5%),
     'text': $color-gray,
     'stripe': hsl(0deg 0% 100% / 2.5%),
-  )
+  ),
 );
