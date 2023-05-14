@@ -22,7 +22,7 @@
 
                 <ul
                     class="site-footer__navigation"
-                    aria-labelledby="site-footer-title-02"
+                    aria-labelledby="site-footer-title-{{ block.title | slugify }}"
                 >
                     {% for item in block.items %}
                     <li>
