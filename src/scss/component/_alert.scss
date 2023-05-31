@@ -42,12 +42,12 @@
     @include clear-btn;
     @include transition;
     align-items: center;
+    block-size: var(--dimension);
     border-radius: config('border-radius-sm', $display);
     display: flex;
     flex-shrink: 0;
-    height: var(--dimension);
+    inline-size: var(--dimension);
     justify-content: center;
-    width: var(--dimension);
 
     &:hover,
     &:focus {
@@ -56,8 +56,8 @@
 
     svg {
       --dimension: 0.5rem;
-      height: var(--dimension);
-      width: var(--dimension);
+      block-size: var(--dimension);
+      inline-size: var(--dimension);
     }
   }
 }

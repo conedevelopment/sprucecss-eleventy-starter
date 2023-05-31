@@ -39,17 +39,17 @@
     align-items: center;
     display: flex;
     gap: spacer('m');
+    inline-size: 100%;
     justify-content: space-between;
     padding-block: spacer('m');
     text-align: start;
-    width: 100%;
 
     &:focus-visible {
       svg {
         @include focus-ring(
           $type: config('focus-ring-type', $btn),
           $ring-color: color('primary'),
-          $ring-width: config('focus-ring-width', $btn),
+          $ring-size: config('focus-ring-size', $btn),
           $ring-offset: config('focus-ring-offset', $btn)
         );
       }
@@ -59,11 +59,11 @@
       --dimension: 1.75rem;
 
       background-color: color('primary');
+      block-size: var(--dimension);
       border-radius: config('border-radius-sm', $display);
       color: hsl(0deg 0% 100%);
       flex-shrink: 0;
-      height: var(--dimension);
-      width: var(--dimension);
+      inline-size: var(--dimension);
     }
 
     &[aria-expanded='true'] .vertical-line {

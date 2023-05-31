@@ -9,9 +9,9 @@
 
   &__logo {
     --dimension: 4rem;
+    block-size: var(--dimension);
     display: inline-flex;
-    height: var(--dimension);
-    width: var(--dimension);
+    inline-size: var(--dimension);
   }
 
   &__title {
@@ -43,9 +43,9 @@
 
       svg {
         --dimension: 0.65em;
+        block-size: var(--dimension);
         color: color('arrow', 'navigation');
-        height: var(--dimension);
-        width: var(--dimension);
+        inline-size: var(--dimension);
       }
     }
   }

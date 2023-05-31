@@ -64,9 +64,9 @@
 
     svg {
       --dimension: 0.65em;
+      block-size: var(--dimension);
       color: color('arrow', 'navigation');
-      height: var(--dimension);
-      width: var(--dimension);
+      inline-size: var(--dimension);
     }
   }
 }
