@@ -2,6 +2,7 @@
 
 @use 'sprucecss/scss/spruce' with (
   $btn: (
+    'border-radius': 0.65rem,
     'font-family': #{'Manrope', sans-serif},
     'font-weight': 600,
   ),

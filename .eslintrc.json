@@ -13,13 +13,7 @@
   "globals": {
     "google": true
   },
-  "ignorePatterns": [
-    "assets/js/fancybox.js",
-    "assets/js/scripts.js",
-    "assets/js/tinymce-shortcode.js",
-    "assets/js/asp-ajax.js",
-    "assets/js/decree-search.js"
-  ],
+  "ignorePatterns": [],
   "rules": {
     "no-param-reassign": 0,
     "no-shadow": "off",

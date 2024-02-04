@@ -2,16 +2,8 @@
     <div class="container">
         <div class="site-footer__top">
             <div class="site-footer__col">
-                <a class="site-footer__logo" href="/">
-                    <img
-                        src="/img/cone-made-logo-dark.svg"
-                        alt="Cone Made"
-                        width="72"
-                        height="72"
-                        data-theme-mode="data-theme-mode"
-                        data-light-asset="/img/cone-made-logo-dark.svg"
-                        data-dark-asset="/img/cone-made-logo-light.svg"
-                    />
+                <a class="site-footer__logo" href="/" aria-label="Spruce CSS Framework">
+                    {% svgIcon './src/img/spruce-logo-without-text.svg' %}
                 </a>
             </div>
             {% for block in navigation.footer %}
@@ -48,7 +40,7 @@
         </div>
         <div class="site-footer__bottom">
             <p class="site-footer__copyright">
-                © {{ global.year() }} Cone Made - Some rights are reserved.
+                © {{ global.year() }} - Some rights are reserved.
             </p>
         </div>
     </div>

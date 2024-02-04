@@ -27,10 +27,13 @@
   }
 
   &__logo {
-    --dimension: 4rem;
-    block-size: var(--dimension);
     display: inline-flex;
-    inline-size: var(--dimension);
+
+    img {
+      block-size: 1.75rem;
+      display: inline-flex;
+      inline-size: auto;
+    }
   }
 
   &__email {
